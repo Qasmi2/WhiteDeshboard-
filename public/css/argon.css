@@ -6047,7 +6047,8 @@ input[type='button'].btn-block
 {
     display: flex;
 
-    padding-left: 0;
+    /* padding-left: 0; */
+    padding: 20px;
 
     list-style: none;
 

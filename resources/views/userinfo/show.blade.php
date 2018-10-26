@@ -32,6 +32,7 @@
                     <?php 
                          $view = sizeof($views);
                     ?>
+                     
  <div class="container-fluid mt-2">
       <!-- Table -->
       <div class="row">
@@ -39,6 +40,11 @@
           <div class="card shadow">
             <div class="card-header border-0">
               <h3 class="mb-0">View Record</h3>
+              <div class="row">
+                <div class="col-sm-6 offset-sm-6">
+                      <input id="myInput" type="text" class="form-control" placeholder="Search..." style="border-radius: 20px;">
+                </div>
+              </div>  
             </div>
             <div class="table-responsive">
               <table class="table align-items-center table-flush">
@@ -52,7 +58,7 @@
                    
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="myTable">
                 @for($i=0; $i < $view ; $i++)
                   <tr>
                     <th scope="row">
