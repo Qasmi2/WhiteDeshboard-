@@ -12,7 +12,7 @@ class info extends Model
      * @var array
      */
     protected $fillable = [
-        'name','identity','ptclNO','mobileNo',
+        'name','identity','ptclNO','mobileNo','address',
      ];
      /**
       * The attributes that should be hidden for arrays.

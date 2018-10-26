@@ -15,10 +15,11 @@ class CreateInfosTable extends Migration
     {
         Schema::create('infos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('identity');
-            $table->string('ptclNO');
-            $table->string('mobileNo');
+            $table->string('name')->nullable();
+            $table->string('identity')->nullable();
+            $table->string('ptclNO')->nullable();
+            $table->string('mobileNo')->nullable();
+            $table->string('address')->nullable();
             $table->timestamps();
         });
     }

@@ -30,9 +30,11 @@ class userinfoController extends Controller
         
         $validator = Validator::make($request->all(), [
             'name' => 'required',
-            'identity' =>'required',
-            'ptclNo' =>'required',
-            'mobileNo' =>'required',
+            'address' => 'required',
+            // 'identity' =>'required',
+            // 'ptclNo' =>'required',
+            // 'mobileNo' =>'required',
+           
         
         ]);
         if ($validator->fails()) {
@@ -44,6 +46,7 @@ class userinfoController extends Controller
         $info->identity = $request->input('identity');
         $info->ptclNo = $request->input('ptclNo');
         $info->mobileNo = $request->input('mobileNo');
+        $info->address = $request->input('address');
         if($info->save()){
 
             return redirect()->back()->with('success',' Data is successfull Inserted .');
@@ -99,9 +102,11 @@ class userinfoController extends Controller
         try{
             $validator = Validator::make($request->all(), [
                 'name' => 'required',
-                'identity' =>'required',
-                'ptclNo' =>'required',
-                'mobileNo' =>'required',
+                'address' => 'required',
+                // 'identity' =>'required',
+                // 'ptclNo' =>'required',
+                // 'mobileNo' =>'required',
+                
             
             ]);
             if ($validator->fails()) {
@@ -113,6 +118,7 @@ class userinfoController extends Controller
             $info->identity = $request->input('identity');
             $info->ptclNo = $request->input('ptclNo');
             $info->mobileNo = $request->input('mobileNo');
+            $info->address = $request->input('address');
             if($info->save()){
 
                 return redirect()->back()->with('success',' Data is successfull Updated .');

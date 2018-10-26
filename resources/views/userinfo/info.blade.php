@@ -32,28 +32,16 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-md-12 col-lg-12 col-sm-12">
-                                    <label for="identity">{{ __('CNIC Number') }}</label>
-                                    <input id="identity" type="tel" size="15" maxlength="15" placeholder="CNIC NO ( 6110112345678 )" class="form-control{{ $errors->has('identity') ? ' is-invalid' : '' }}" name="identity" value="{{ old('identity') }}"  pattern="[0-9]{13}" title=" Please match the CNIC No" required>
-                                
-                                    @if ($errors->has('identity'))
-                                        <span class="invalid-feedback">
-                                            <strong>{{ $errors->first('identity') }}</strong>
-                                        </span>
-                                    @endif
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-md-12 col-lg-12 col-sm-12">
-                                <label for="ptclNo">{{ __('PTCL Number') }}</label>
-                                <input id="ptclNo" type="text" placeholder="Enter PTCL Number ( 051331234567 ) " class="form-control{{ $errors->has('ptclNo') ? ' is-invalid' : '' }}" name="ptclNo" value="{{ old('ptclNo') }}"  required>
-                              
-                                @if ($errors->has('ptclNo'))
+                                <label for="address" >{{ __('Address') }}</label>
+                                <input id="address" type="text" placeholder="Enter your Address " class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" name="address" value="{{ old('address') }}" required>
+                               
+                                @if ($errors->has('address'))
                                     <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('ptclNo') }}</strong>
+                                        <strong>{{ $errors->first('address') }}</strong>
                                     </span>
                                 @endif
+                              
                             </div>
-                           
                         </div>
                         <div class="form-group row">
                             <div class="col-md-12 col-lg-12 col-sm-12">
@@ -66,6 +54,33 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                <label for="ptclNo">{{ __('PTCL Number') }}</label>
+                                <input id="ptclNo" type="text" placeholder="Enter PTCL Number ( 051331234567 ) " class="form-control{{ $errors->has('ptclNo') ? ' is-invalid' : '' }}" name="ptclNo" value="{{ old('ptclNo') }}"  >
+                              
+                                @if ($errors->has('ptclNo'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('ptclNo') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                           
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                    <label for="identity">{{ __('CNIC Number') }}</label>
+                                    <input id="identity" type="tel" size="15" maxlength="15" placeholder="CNIC NO ( 6110112345678 )" class="form-control{{ $errors->has('identity') ? ' is-invalid' : '' }}" name="identity" value="{{ old('identity') }}"  pattern="[0-9]{13}" title=" Please match the CNIC No" >
+                                
+                                    @if ($errors->has('identity'))
+                                        <span class="invalid-feedback">
+                                            <strong>{{ $errors->first('identity') }}</strong>
+                                        </span>
+                                    @endif
+                            </div>
+                        </div>
+                        
+
                      
                        
                         <div class="col-md-12 col-lg-12 col-sm-12" style="margin-top:30px;">
