@@ -65,7 +65,8 @@ class userinfoController extends Controller
      */
     public function show($id)
     {
-        //
+        $views = info::where("id", $id)->first();
+        return view('userinfo.showsingle',compact('views'));
     }
 
     /**

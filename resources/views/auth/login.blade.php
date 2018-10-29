@@ -133,22 +133,23 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-                         <div class="input-group input-group-alternative mb-3">
+                         <div class="input-group input-group-alternative err mb-3">
                             <div class="input-group-prepend">
                             <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                             </div>
                              <!-- <input class="form-control"  type="text" name="name" required autofocus> -->
                              <input id="email" type="email"  placeholder="Email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
+                             @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
-                                @endif
+                            @endif
+                              
                          </div>
+                       
 
                        
-                        <div class="input-group input-group-alternative mb-3">
+                        <div class="input-group input-group-alternative pass mb-3">
                             <div class="input-group-prepend">
                                  <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                             </div>
@@ -161,8 +162,8 @@
                                 @endif
                         </div>
                       
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                        <div class="form-group row mb-0 ">
+                            <div class="col-md-6 offset-md-4 login-btn">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>

@@ -23,6 +23,7 @@ Route::get('showform', function () {
 })->name('showform')->middleware('auth');
 Route::get('views','userinfoController@index')->name('views')->middleware('auth');
 Route::post('insert','userinfoController@store')->name('insert')->middleware('auth');
+Route::get('view/{id}','userinfoController@show')->name('view')->middleware('auth');
 Route::get('edit/{id}','userinfoController@edit')->name('edit')->middleware('auth');
 Route::post('updating/{id}','userinfoController@update')->name('updating')->middleware('auth');
 Route::get('delete/{id}','userinfoController@destroy')->name('delete')->middleware('auth');

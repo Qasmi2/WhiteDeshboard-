@@ -21894,3 +21894,36 @@ button.btn.btn-primary {
 .card-header h3 {
     color: #444;
 }
+
+/* button.btn.btn-primary.trans {
+    background-color: transparent;
+    border:0;
+    box-shadow: none;
+    width:auto !important;
+    padding: 0;
+
+
+}
+button.btn.btn-primary.trans button:active {
+background: transparent !important;
+    
+}
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle{
+    background-color: transparent;
+} */
+.card-header.lab h4{
+    color: #444;
+}
+.login-btn button {
+padding:10px 40px ;
+}
+.input-group-alternative.err {
+
+    height: 50px;
+}
+/* .err .invalid-feedback{
+    padding:15px 0;
+} */
+.input-group-alternative.pass{
+    margin-top:30px;
+}
