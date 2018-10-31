@@ -18,12 +18,20 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('showform', function () {
-    return view('userinfo.info');
-})->name('showform')->middleware('auth');
+// Route::get('showform', function () {
+//     return view('userinfo.info');
+// })->name('showform')->middleware('auth');
+Route::get('showform','userinfoController@showform')->name('showform')->middleware('auth');
 Route::get('views','userinfoController@index')->name('views')->middleware('auth');
 Route::post('insert','userinfoController@store')->name('insert')->middleware('auth');
 Route::get('view/{id}','userinfoController@show')->name('view')->middleware('auth');
 Route::get('edit/{id}','userinfoController@edit')->name('edit')->middleware('auth');
 Route::post('updating/{id}','userinfoController@update')->name('updating')->middleware('auth');
 Route::get('delete/{id}','userinfoController@destroy')->name('delete')->middleware('auth');
+
+// logo 
+
+Route::get('logo','logoController@index')->name('logo')->middleware('auth');
+Route::post('insertlogo','logoController@store')->name('insertlogo')->middleware('auth');
+
+

@@ -23,6 +23,13 @@
 
 <body>
 <div id="app">
+<?php 
+        //$logo = array ($logo);
+        foreach($logo as $te){
+            $image = $te->cover_image;
+        }
+        
+?>
   <!-- Sidenav -->
   @guest
   @else
@@ -36,7 +43,9 @@
     
       <a class="navbar-brand pt-0" href="#">
 
-      <img src="{{ asset('images/logo1.png') }}" />
+      <img src="{{$image}}" />
+      <img  />
+      <img  />
       </a>
       <!-- User -->
       <ul class="nav align-items-center d-md-none">
@@ -136,9 +145,54 @@
   
     <!-- Page content -->
         <main >
-                @yield('content')
-        </main>
-  </div>
+
+                    
+
+ <div class="container-fluid mt-2">
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header border-0">
+              <h3 class="mb-0">Logo Upload</h3>
+            </div>
+            <div class="card-body">
+                <div class="p-3 bg-secondary mb-2">  <label for="title" style="margin-top: 5px;margin-left: 10px;"></label>
+                    <img src="{{$image}}" height="100" width="100">
+                </div>
+                <form method="POST" action="{{route('insertlogo')}}" enctype="multipart/form-data" value="PATCH" >
+                        {{ csrf_field() }}
+                        <div class="form-group row">
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                            <label>Please choose your Logo</label>
+                                <br>
+                                <input type="file" name="cover_image" id="cover_image" class="btn btn-primary" style="color:white;" required/>
+                                    @if ($errors->has('cover_image'))
+                                        <span class="invalid-feedback">
+                                            <strong>{{ $errors->first('cover_image') }}</strong>
+                                        </span>
+                                    @endif
+                                <br>
+                              
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-12 col-lg-12 col-sm-12" style="margin-top:30px;">
+                            <div class="form-group row mb-0">
+                                <div class="col-md-12 ">
+                                    <button type="submit" class="btn btn-primary "  >
+                                        {{ __('Submit') }}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+      </div>
   </div>
   <script src="{{ asset('vendor/jquery/dist/jquery.min.js') }}" defer></script>
   <script src="{{ asset('vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}" defer></script>
