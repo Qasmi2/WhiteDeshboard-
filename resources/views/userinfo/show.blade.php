@@ -46,15 +46,15 @@
                 </div>
               </div>  
             </div>
-            <div class="table-responsive">
+            <div class="table-responsive" style="overflow-y: auto;">
               <table class="table align-items-center table-flush">
                 <thead class="thead-light">
                   <tr>
                     <th scope="col">NAME</th>
-                    <!-- <th scope="col">ADDRESS</th> -->
+                    <th scope="col">ADDRESS</th>
                     <th scope="col">MOBILE NUMBER</th>
-                    <th scope="col">PTCL NUMBER</th>
-                    <th scope="col">CNIC NUMBER</th>
+                    <!-- <th scope="col">PTCL NUMBER</th>
+                    <th scope="col">CNIC NUMBER</th> -->
                     <th scope="col">ACTIONS</th>
                    
                   </tr>
@@ -70,23 +70,19 @@
                         </div>
                       </div>
                     </th>
-                    <!-- <td>
+                    <td>
                     <span class="mb-0 text-sm">{{$views[$i]['address']}}</span>
-                    </td> -->
+                    </td>
                     <td>
                         <span class="badge badge-dot mr-4">
                         <span class="mb-0 text-sm">{{$views[$i]['mobileNo']}}</span>
                         </span>
                     </td>
-                    <td>
-                      <span class="badge badge-dot mr-4">
-                      <span class="mb-0 text-sm">{{$views[$i]['ptclNO']}}</span>
-                      </span>
-                    </td>
-                    <td>
+                   
+                    <!-- <td>
                     <span class="mb-0 text-sm">{{$views[$i]['identity']}}</span>
-                    </td>
-                    <td>
+                    </td>-->
+                    <td> 
                         <span class="badge badge-dot mr-4">
                         <span class="mb-0 text-sm">
                         <a href="{{ url('view/'.$views[$i]['id'])}}"> <span><img src="{{ asset('images/iconsuser.png') }}" /><span></a>
